@@ -1,4 +1,4 @@
-# Convert Latex file to Word/Markdown file
+# Convert Latex file to Word/Markdown file using pandoc
 **`January 30, 2024 / by Yu-Shin, Hu`**
 
 Mathematical formulas and pictures can be converted successfully!
