@@ -36,7 +36,7 @@ Mathematical formulas and pictures can be converted successfully!
 -   Run in cmd to see the available Chinese font: `fc-list :lang=zh`
 -   Or download more fonts: [Google Fonts](https://fonts.google.com/) / [DaFont](https://www.dafont.com/)
 
-**Step 2. Run in cmd: `pandoc  "input_file.format" -o "input_file.format" --pdf-engine=xelatex -V mainfont='font_name'`**
+**Step 4. Run in cmd: `pandoc  "input_file.format" -o "input_file.format" --pdf-engine=xelatex -V mainfont='font_name'`**
 -   The font name follows the font file location. For example, `C:/WINDOWS/Fonts/mingliu.ttc: MingLiU,細明體:style=Regular`, font name is called MingLiU.
 -   Convert Markdown to PDF:<br>
   `pandoc  "input_file.md" -o "output_file.pdf" --pdf-engine=xelatex -V mainfont='MingLiU'`
