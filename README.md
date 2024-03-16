@@ -1,4 +1,4 @@
-# Convert file types using pandoc
+# Convert File Formats Using Pandoc
 **`January 30, 2024 / by Yu-Shin, Hu`**
 
 Mathematical formulas and pictures can be converted successfully!
