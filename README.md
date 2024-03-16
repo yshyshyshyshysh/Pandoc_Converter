@@ -27,7 +27,8 @@ Mathematical formulas and pictures can be converted successfully!
 -   See the above.
 
 **Step 2. Install a LaTeX distribution**
--  [TeX Live](https://www.tug.org/texlive/quickinstall.html) 
+-  Download the network install from the official website (not recommended): [TeX Live](https://www.tug.org/texlive/quickinstall.html) (it involves downloading and installing required files from the source server, which may take several hours).
+-  Download the pre-packaged installation image (*.iso) at once (recommended): Enter [清华大学镜像站](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) and download `texlive2024.iso`
 
 **Step 3. Find a valid Chinese font**
 -   Run in cmd to see the available Chinese font: `fc-list :lang=zh`
