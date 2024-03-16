@@ -1,0 +1,25 @@
+\usepackage{fancyvrb,newverbs}
+\usepackage{hyperref}
+\usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+
+% change background color for inline code in
+% markdown files. The following code does not work well for
+% long text as the text will exceed the page boundary
+\definecolor{bgcolor}{HTML}{E0E0E0}
+\let\oldtexttt\texttt
+
+\renewcommand{\texttt}[1]{
+  \colorbox{bgcolor}{\oldtexttt{#1}}
+}
+
+%% color and other settings for hyperref package
+\hypersetup{
+  bookmarksopen=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=RoyalBlue,
+}
+
+%% 设置 shade 背景色（代码背景颜色）
+\usepackage{color,framed}
+\definecolor{shadecolor}{RGB}{235,235,235}P
