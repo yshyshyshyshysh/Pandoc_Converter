@@ -21,6 +21,9 @@ Mathematical formulas and pictures can be converted successfully!
 
 ## Convert other formats to PDF
 
+### Alternative way: no pandoc
+後來發現用 VScode 上的套件比較快: [Markdown PDF](https://blog.darkthread.net/blog/markdown-to-pdf/)
+
 ### Steps
 
 **Step 1. Install the latest pandoc**
@@ -45,20 +48,28 @@ Mathematical formulas and pictures can be converted successfully!
 \usepackage{hyperref}
 \usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
 
-% change background color for inline code in
-% markdown files. The following code does not work well for
-% long text as the text will exceed the page boundary
+% change background color for inline code
 \definecolor{bgcolor}{HTML}{E0E0E0}
 \let\oldtexttt\texttt
-
 \renewcommand{\texttt}[1]{
   \colorbox{bgcolor}{\oldtexttt{#1}}
 }
+
+%% color and other settings for hyperref package
+\hypersetup{
+  bookmarksopen=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=RoyalBlue,
+}
 ```
+-   Or download an existing LaTeX template: follow [how to set up Latex template](https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/)
 
 **Step 5. Run in cmd: `pandoc "input_file.format" -o "input_file.format" --pdf-engine=xelatex -V mainfont='font_name'`**
--   Convert Markdown to PDF:<br>
+-   Convert Markdown to PDF using custom styling:<br>
   `pandoc README.md -o README.pdf --pdf-engine=xelatex -V CJKmainfont='PMingLiU' -V mainfont='Times New Roman' -H head.tex`
+-   Convert Markdown to PDF using an existing template (Eisvogel is used here):<br>
+  `pandoc README.md -o README.pdf --pdf-engine=xelatex -V CJKmainfont='PMingLiU' -V mainfont='Times New Roman' --from markdown --template eisvogel --listings`
 
 
 ### Reference
@@ -67,8 +78,11 @@ About TeX Live installation
 -   [安裝 TeX Live 镜像](https://zhuanlan.zhihu.com/p/64555335)
 
 About rendering styles in TeXLive
--   [head.tex 中的指令 1](https://zhuanlan.zhihu.com/p/444440478)
--   [head.tex 中的指令 2](https://jdhao.github.io/2017/12/10/pandoc-markdown-with-chinese/)
+-   [Eisvogel: pandoc-latex-template](https://github.com/Wandmalfarbe/pandoc-latex-template)
+-   [customizing-pandoc](https://breezetemple.github.io/2020/11/02/customizing-pandoc/)
+
 
 <!-- 
+-   [head.tex 中的指令 1](https://zhuanlan.zhihu.com/p/444440478)
+-   [head.tex 中的指令 2](https://jdhao.github.io/2017/12/10/pandoc-markdown-with-chinese/)
 --!>
