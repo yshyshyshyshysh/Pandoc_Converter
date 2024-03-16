@@ -19,7 +19,7 @@ Mathematical formulas and pictures can be converted successfully!
 -   Convert Latex to Word: `pandoc -s "input_file.tex" -o "output_file.docx"`
 -   Convert Latex to Markdown: `pandoc -s "input_file.tex" -o "output_file.md"`
 
-## Convert other formats to PDF (if document has Chinese)
+## Convert other formats to PDF
 
 ### Steps
 
@@ -32,20 +32,24 @@ Mathematical formulas and pictures can be converted successfully!
     -  Enter [清华大学镜像站](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) and download `texlive2024.iso`<br>
     -  Open the downloaded ISO file and double-click `install-tl-windows.bat` to install.
 
-**Step 3. Find a valid Chinese font**
--   Run in cmd to see the available Chinese font: `fc-list :lang=zh`
+**Step 3. Find a valid Chinese font (if the document has Chinese)**
+-   Run in cmd to see the available Chinese font: `fc-list :lang=zh`<br>
+  The font name follows the font file location. For example, `C:/WINDOWS/Fonts/mingliu.ttc: MingLiU,細明體:style=Regular`, font name is called MingLiU.
 -   Or download more fonts: [Google Fonts](https://fonts.google.com/) / [DaFont](https://www.dafont.com/)
 
-**Step 4. Run in cmd: `pandoc  "input_file.format" -o "input_file.format" --pdf-engine=xelatex -V mainfont='font_name'`**
--   The font name follows the font file location. For example, `C:/WINDOWS/Fonts/mingliu.ttc: MingLiU,細明體:style=Regular`, font name is called MingLiU.
+**Step 4. Run in cmd: `pandoc "input_file.format" -o "input_file.format" --pdf-engine=xelatex -V mainfont='font_name'`**
+-   Put the `head.tex` into the same folder with your `input.md` to render document styles.
 -   Convert Markdown to PDF:<br>
-  `pandoc  "input_file.md" -o "output_file.pdf" --pdf-engine=xelatex -V mainfont='MingLiU'`
-
+  `pandoc README.md -o README.pdf --pdf-engine=xelatex -V CJKmainfont='PMingLiU' -V mainfont='Times New Roman' -H head.tex`
 
 ### Reference
+About TeX Live installation
 -   [Pandoc with Chinese](https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese)
 -   [安裝 TeX Live 镜像](https://zhuanlan.zhihu.com/p/64555335)
 
+About rendering styles in TeXLive
+-   [head.tex 中的指令 1](https://zhuanlan.zhihu.com/p/444440478)
+-   [head.tex 中的指令 2](https://jdhao.github.io/2017/12/10/pandoc-markdown-with-chinese/)
+
 <!-- 
--   [使用 Pandoc 把 Markdown 转为 PDF 文件](https://jdhao.github.io/2017/12/10/pandoc-markdown-with-chinese/)
 --!>
