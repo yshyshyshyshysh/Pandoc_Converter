@@ -19,7 +19,7 @@ Mathematical formulas and pictures can be converted successfully!
 -   Convert Latex to Word: `pandoc -s "input_file.tex" -o "output_file.docx"`
 -   Convert Latex to Markdown: `pandoc -s "input_file.tex" -o "output_file.md"`
 
-## Convert other formats to PDF
+## Convert other formats to PDF (if document has Chinese)
 
 ### Steps
 
@@ -27,8 +27,8 @@ Mathematical formulas and pictures can be converted successfully!
 -   See the above.
 
 **Step 2. Install a LaTeX distribution**
--  Download the network install from the official website (not recommended): [TeX Live](https://www.tug.org/texlive/quickinstall.html) (it involves downloading and installing required files from the source server, which may take several hours).
--  Download the pre-packaged installation image (*.iso) at once (recommended):<br>
+-  (Not recommended) Download the network install from the official website: [TeX Live](https://www.tug.org/texlive/quickinstall.html) (it involves downloading and installing required files from the source server, which may take several hours).
+-  (Recommended) Download the pre-packaged installation image (*.iso) at once:<br>
     -  Enter [清华大学镜像站](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) and download `texlive2024.iso`<br>
     -  Open the downloaded ISO file and double-click `install-tl-windows.bat` to install.
 
