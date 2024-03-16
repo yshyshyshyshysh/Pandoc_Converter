@@ -22,7 +22,8 @@ Mathematical formulas and pictures can be converted successfully!
 ## Convert other formats to PDF
 
 ### Alternative way: no pandoc
-後來發現用 VScode 上的套件比較快: [Markdown PDF](https://blog.darkthread.net/blog/markdown-to-pdf/)
+-  後來發現用 VScode 上的套件比較快: [Markdown PDF](https://blog.darkthread.net/blog/markdown-to-pdf/)
+-  自行更改 `markdown-pdf.css` 到 `Settings.json`
 
 ### Steps
 
@@ -40,7 +41,7 @@ Mathematical formulas and pictures can be converted successfully!
   The font name follows the font file location. For example, `C:/WINDOWS/Fonts/mingliu.ttc: MingLiU,細明體:style=Regular`, font name is called MingLiU.
 -   Or download more fonts: [Google Fonts](https://fonts.google.com/) / [DaFont](https://www.dafont.com/)
 
-**Step 4. Set styling for the output pdf`**
+**Step 4. Set styling for the output pdf**
 -   Download the `head.tex` into the same folder with your `input.md` to render document styles.
 
 ```tex {.linenums}

@@ -1,0 +1,4 @@
+/* for inline code */
+:not(pre):not(.hljs)>code {
+    color: rgb(231, 107, 35);
+}
