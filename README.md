@@ -28,7 +28,9 @@ Mathematical formulas and pictures can be converted successfully!
 
 **Step 2. Install a LaTeX distribution**
 -  Download the network install from the official website (not recommended): [TeX Live](https://www.tug.org/texlive/quickinstall.html) (it involves downloading and installing required files from the source server, which may take several hours).
--  Download the pre-packaged installation image (*.iso) at once (recommended): Enter [清华大学镜像站](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) and download `texlive2024.iso`
+-  Download the pre-packaged installation image (*.iso) at once (recommended):<br>
+    -  Enter [清华大学镜像站](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) and download `texlive2024.iso`<br>
+    -  Open the downloaded ISO file and double-click `install-tl-windows.bat` to install.
 
 **Step 3. Find a valid Chinese font**
 -   Run in cmd to see the available Chinese font: `fc-list :lang=zh`
@@ -42,5 +44,8 @@ Mathematical formulas and pictures can be converted successfully!
 
 ### Reference
 -   [Pandoc with Chinese](https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese)
--   [使用 Pandoc 把 Markdown 转为 PDF 文件](https://jdhao.github.io/2017/12/10/pandoc-markdown-with-chinese/)
+-   [安裝 TeX Live 镜像](https://zhuanlan.zhihu.com/p/64555335)
 
+<!-- 
+-   [使用 Pandoc 把 Markdown 转为 PDF 文件](https://jdhao.github.io/2017/12/10/pandoc-markdown-with-chinese/)
+--!>
