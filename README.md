@@ -37,10 +37,29 @@ Mathematical formulas and pictures can be converted successfully!
   The font name follows the font file location. For example, `C:/WINDOWS/Fonts/mingliu.ttc: MingLiU,細明體:style=Regular`, font name is called MingLiU.
 -   Or download more fonts: [Google Fonts](https://fonts.google.com/) / [DaFont](https://www.dafont.com/)
 
-**Step 4. Run in cmd: `pandoc "input_file.format" -o "input_file.format" --pdf-engine=xelatex -V mainfont='font_name'`**
--   Put the `head.tex` into the same folder with your `input.md` to render document styles.
+**Step 4. Set styling for the output pdf`**
+-   Download the `head.tex` into the same folder with your `input.md` to render document styles.
+
+```tex {.linenums}
+\usepackage{fancyvrb,newverbs}
+\usepackage{hyperref}
+\usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+
+% change background color for inline code in
+% markdown files. The following code does not work well for
+% long text as the text will exceed the page boundary
+\definecolor{bgcolor}{HTML}{E0E0E0}
+\let\oldtexttt\texttt
+
+\renewcommand{\texttt}[1]{
+  \colorbox{bgcolor}{\oldtexttt{#1}}
+}
+```
+
+**Step 5. Run in cmd: `pandoc "input_file.format" -o "input_file.format" --pdf-engine=xelatex -V mainfont='font_name'`**
 -   Convert Markdown to PDF:<br>
   `pandoc README.md -o README.pdf --pdf-engine=xelatex -V CJKmainfont='PMingLiU' -V mainfont='Times New Roman' -H head.tex`
+
 
 ### Reference
 About TeX Live installation
