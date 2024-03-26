@@ -1,4 +1,8 @@
+body {
+  font-family: "Times New Roman", "Microsoft Yahei", "KaiTi" "Arial", sans-serif;
+}
+
 /* for inline code */
-:not(pre):not(.hljs)>code {
-    color: rgb(186, 66, 66);
+:not(pre):not(.hljs) > code {
+  color: rgb(186, 66, 66);
 }
